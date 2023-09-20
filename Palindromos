@@ -1,0 +1,17 @@
+def es_palindromo(numero):
+    original = numero
+    invertido = 0
+
+    while numero > 0:
+        digito = numero % 10
+        invertido = invertido * 10 + digito
+        numero = numero // 10
+
+    return original == invertido
+
+numero = int(input("Ingrese un número: "))
+
+if es_palindromo(numero):
+    print(numero, "es un palíndromo.")
+else:
+    print(numero, "no es un palíndromo.")
